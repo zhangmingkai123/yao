@@ -1,0 +1,43 @@
+{
+	"jiu":[
+	       "img/i4-logo.png"
+	       ],
+	"swiper":[
+	          "img/banner4.jpg",
+	          "img/banner3.png",
+	          "img/banner2.png",
+	          "img/banner1.jpg"
+	          ],
+	"nava":[
+	        "img/icon.png",
+	        "img/icon1.png",
+	        "img/icon2.png",
+	        "img/icon3.png"
+	        ],
+	"navb":[
+	        "测评",
+	        "专题",
+	        "排行榜",
+	        "类别"
+	        ],
+	"po":[
+	      "新鲜测评",
+	      "显示全部 >"
+	      ],
+	"diimg":[
+	         "img/test.jpg",
+	         "img/test.jpg",
+	         "img/test.jpg"
+	         ],
+	"dip":[
+	       "感恩笔记",
+	       "感恩笔记本：发现身边美好的人和事。让自己变的更幸福一点",
+	       "8.5",
+	       "感恩笔记",
+	       "感恩笔记本：发现身边美好的人和事。让自己变的更幸福一点",
+	       "8.5",
+	       "感恩笔记",
+	       "感恩笔记本：发现身边美好的人和事。让自己变的更幸福一点",
+	       "8.5"
+	       ]
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/a.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<style type="text/css">
+			
+		</style>
+		
+	</head>
+	<body>
+		<div class="navbar-fixed-top header">
+			<span class="glyphicon glyphicon-menu-hamburger"></span>
+			<img src=""/>
+			<span class="glyphicon glyphicon-search"></span>
+		</div>
+		<div class="a"></div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src=""/></div>
+				<div class="swiper-slide"><img src=""/></div>
+				<div class="swiper-slide"><img src=""/></div>
+				<div class="swiper-slide"><img src=""/></div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<div class="nav_a">
+			<div>
+				<img src=""/>
+				<p></p>
+			</div>
+			<div>
+				<img src=""/>
+				<p></p>
+			</div>
+			<div>
+				<img src=""/>
+				<p></p>
+			</div>
+			<div>
+				<img src=""/>
+				<p></p>
+			</div>
+		</div>
+		<div class="b"></div>
+		<div class="p">
+			<p></p>
+			<p></p>
+		</div>
+		<div class="di">
+				<img src=""/>
+				<div style="padding: 0.5rem;">
+					<p></p>
+					<p></p>
+				</div>
+				<p style="color: orange;font-size: 1.8rem;font-weight: bold;"></p>
+			
+		</div>
+		<div class="di">
+				<img src=""/>
+				<div style="padding: 0.5rem;">
+					<p></p>
+					<p></p>
+				</div>
+				<p style="color: orange;font-size: 1.8rem;font-weight: bold;"></p>
+			
+		</div>
+		<div class="di">
+				<img src=""/>
+				<div style="padding: 0.5rem;">
+					<p></p>
+					<p></p>
+				</div>
+				<p style="color: orange;font-size: 1.8rem;font-weight: bold;"></p>
+			
+		</div>
+	</body>
+	<script>
+		window.onload=window.onresize=function(){
+			document.documentElement.style.fontSize=10*(document.documentElement.clientWidth/320)+'px'
+		}
+		var swiper=new Swiper(".swiper-container",{
+			autoplay:2000,
+			pagination:".swiper-pagination",
+			paginationClickable:true,
+		})
+		$.ajax({
+			type:"get",
+			url:"a.json",
+			async:true,
+			dataType:"json",
+			success:function(data){
+				$(".header img").attr("src",data.jiu)
+				$.each(data.swiper,function(i,n){
+					$(".swiper-slide img").eq(i).attr("src",n)
+				})
+				$.each(data.nava,function(i,n){
+					$(".nav_a img").eq(i).attr("src",n)
+				})
+				$.each(data.navb, function(i,n) {
+					$(".nav_a p").eq(i).html(n)
+				});
+				$.each(data.po, function(i,n) {
+					$(".p p").eq(i).html(n)
+				});
+				$.each(data.diimg, function(i,n) {
+					$(".di img").eq(i).attr("src",n)
+				});
+				//$(".di img").attr("src",data.diimg)
+				$.each(data.dip, function(i,n) {
+					$(".di p").eq(i).html(n)
+				});
+			}
+		});
+	</script>
+</html>
